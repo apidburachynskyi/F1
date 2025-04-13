@@ -1,4 +1,6 @@
 
+#%%
+
 import requests
 import pandas as pd
 
@@ -65,3 +67,5 @@ def extract_race_results():
 
 if __name__ == "__main__":
     extract_race_results()
+
+# %%

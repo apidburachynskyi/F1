@@ -1,0 +1,53 @@
+Best Parameters: {'colsample_bytree': np.float64(0.8453932607674017), 'learning_rate': np.float64(0.18640946608088754), 'max_depth': 7, 'n_estimators': 198, 'reg_alpha': np.float64(4.1468828460210165), 'reg_lambda': np.float64(2.411357611872126), 'subsample': np.float64(0.9724541567081075)}
+Test Metrics: Log loss: 0.17733522016652198, AUC: 0.9230769230769231
+Confusion Matrix: [[434  21]
+ [ 11  13]]
+Classification Report:               precision    recall  f1-score   support
+
+           0     0.9753    0.9538    0.9644       455
+           1     0.3824    0.5417    0.4483        24
+
+    accuracy                         0.9332       479
+   macro avg     0.6788    0.7478    0.7064       479
+weighted avg     0.9456    0.9332    0.9386       479
+
+Ranking-based Metrics:             FullName        event  year         TeamFamily  GridPosition  \
+310   Max Verstappen  albert_park  2024           Red Bull             1   
+25      Carlos Sainz  albert_park  2024            Ferrari             2   
+242     Lando Norris  albert_park  2024            McLaren             3   
+49   Charles Leclerc  albert_park  2024            Ferrari             4   
+361    Oscar Piastri  albert_park  2024            McLaren             5   
+..               ...          ...   ...                ...           ...   
+445  Valtteri Bottas    zandvoort  2024  Alfa_Romeo_Family            16   
+183      Guanyu Zhou    zandvoort  2024  Alfa_Romeo_Family            17   
+307   Logan Sargeant    zandvoort  2024           Williams            18   
+14   Alexander Albon    zandvoort  2024           Williams            19   
+208  Kevin Magnussen    zandvoort  2024       Haas F1 Team            20   
+
+     Position  prob_is_winner  rank_is_winner  is_podium_actual  \
+310        19        0.772765             1.0             False   
+25          1        0.064436             3.0              True   
+242         3        0.030195             4.0              True   
+49          2        0.001635            10.0              True   
+361         4        0.008516             5.0             False   
+..        ...             ...             ...               ...   
+445        19        0.000240            18.0             False   
+183        20        0.000600            12.0             False   
+307        16        0.000511            15.0             False   
+14         14        0.000278            17.0             False   
+208        18        0.000370            16.0             False   
+
+     is_podium_predicted  
+310                 True  
+25                  True  
+242                False  
+49                 False  
+361                False  
+..                   ...  
+445                False  
+183                False  
+307                False  
+14                 False  
+208                False  
+
+[479 rows x 10 columns]

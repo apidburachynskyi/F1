@@ -1,3 +1,5 @@
+#%%
+
 import pandas as pd
 import numpy as np
 
@@ -14,6 +16,8 @@ df['Position'] = df['position']
 df['GridPosition'] = df['grid'].replace(0, 21)  # Pit lane = 21
 
 df.sort_values(by=["FullName", "EventDate"], inplace=True)
+
+#%%
 
 # Team Heritage
 
@@ -126,3 +130,5 @@ final_features = [
 final_df = df[final_features]
 final_df = final_df[final_df["year"] >= 2015].reset_index(drop=True)
 final_df.to_csv("Data/race_feature_2015_2024.csv", index=False)
+
+# %%
